@@ -35,6 +35,9 @@ zfs set recordsize=64K zroot/bhyve
 zfs create zroot/bhyve/.templates
 cp /usr/local/share/examples/vm-bhyve/* /zroot/bhyve/.templates/
 
+echo Copying uefi.conf template from this directory to .templates...
+cp ./uefi.conf /zroot/bhyve/.templates/uefi.conf
+
 echo Adding support for virtualization to rc.conf and loader.conf...
 echo 'vmm_load="YES"' >> /etc/loader.conf
 sysrc vm_enable="YES"
