@@ -54,5 +54,5 @@ echo
 echo However, you probably still need to manually install the correct
 echo video driver for your system. To find the correct package, look
 echo for your GPU hardware in the output of pkg search xf86-video. Once
-echo you've found the correct driver package, pkg install xf86-video-<yourcard>
+echo you\'ve found the correct driver package, pkg install xf86-video-\<yourcard\>
 echo and reboot the system with shutdown -r now.
