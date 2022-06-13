@@ -35,8 +35,10 @@ zfs set recordsize=64K zroot/bhyve
 zfs create zroot/bhyve/.templates
 cp /usr/local/share/examples/vm-bhyve/* /zroot/bhyve/.templates/
 
-echo Adding support for virtualization to loader.conf...
+echo Adding support for virtualization to rc.conf and loader.conf...
 echo 'vmm_load="YES"' >> /etc/loader.conf
+sysrc vm_enable="YES"
+sysrc vm_dir="zfs:zroot/bhyve"
 
 echo Determining primary network interface...
 IF=`route get 8.8.8.8 | grep interface | awk '{print $2}'`
