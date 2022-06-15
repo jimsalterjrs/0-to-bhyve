@@ -33,7 +33,6 @@ echo Creating VM root on /zroot/bhyve...
 zfs create zroot/bhyve
 zfs set recordsize=64K zroot/bhyve
 zfs create zroot/bhyve/.templates
-cp /usr/local/share/examples/vm-bhyve/* /zroot/bhyve/.templates/
 
 echo Copying uefi.conf template from this directory to .templates...
 cp ./uefi.conf /zroot/bhyve/.templates/uefi.conf
