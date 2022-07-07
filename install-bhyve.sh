@@ -38,7 +38,7 @@ echo Copying uefi.conf template from this directory to .templates...
 cp ./uefi.conf /zroot/bhyve/.templates/uefi.conf
 
 echo Adding support for virtualization to rc.conf and loader.conf...
-echo 'vmm_load="YES"' >> /etc/loader.conf
+echo 'vmm_load="YES"' >> /boot/loader.conf
 sysrc vm_enable="YES"
 sysrc vm_dir="zfs:zroot/bhyve"
 
